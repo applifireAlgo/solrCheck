@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.1" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+
+
+	<persistence-unit name="proejct4" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<properties>
+			<property name="eclipselink.session.customizer" value="com.athena.config.server.uuidGenerator.UUIDGenerator"/>
+			<property name="eclipselink.ddl-generation" value="none"/>
+			<property name="eclipselink.logging.level" value="FINEST"/>
+			<property name="eclipselink.weaving" value="false"/>
+			<property name="eclipselink.jdbc.allow-native-sql-queries" value="true"/>
+			<property name="eclipselink.deploy-on-startup" value="true"/>
+
+			<property name="eclipselink.connection-pool.default.initial" value="15"/>
+			<property name="eclipselink.connection-pool.default.min" value="6"/>
+			<property name="eclipselink.connection-pool.default.max" value="10"/>
+
+
+		<property name="eclipselink.dialect" value="org.eclipse.persistence.platform.database.MySQLPlatform"/>
+        <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost-MYSQL:3306/proejct4"/>
+        <property name="javax.persistence.jdbc.user" value="proejct4"/>
+        <property name="javax.persistence.jdbc.password" value="proejct4"/>
+        <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+        </properties>
+	<class>proejct4.app.shared.location.Timezone</class>
+    <class>proejct4.app.shared.location.Language</class>
+    <class>proejct4.app.shared.location.Country</class>
+    <class>proejct4.app.shared.location.State</class>
+    <class>proejct4.app.shared.location.City</class>
+    <class>proejct4.app.shared.location.AddressType</class>
+    <class>proejct4.app.shared.location.Address</class>
+    <class>proejct4.app.shared.contacts.ContactType</class>
+    <class>proejct4.app.shared.contacts.CommunicationGroup</class>
+    <class>proejct4.app.shared.contacts.CommunicationType</class>
+    <class>proejct4.app.shared.contacts.Gender</class>
+    <class>proejct4.app.shared.contacts.Title</class>
+    <class>proejct4.app.shared.contacts.CoreContacts</class>
+    <class>proejct4.app.shared.contacts.CommunicationData</class>
+    <class>proejct4.app.shared.authentication.PasswordAlgo</class>
+    <class>proejct4.app.shared.authentication.PasswordPolicy</class>
+    <class>proejct4.app.shared.authentication.Question</class>
+    <class>proejct4.app.shared.authentication.UserAccessLevel</class>
+    <class>proejct4.app.shared.authentication.UserAccessDomain</class>
+    <class>proejct4.app.shared.authentication.User</class>
+    <class>proejct4.app.shared.authentication.Login</class>
+    <class>proejct4.app.shared.authentication.LoginSession</class>
+    <class>proejct4.app.shared.authentication.PassRecovery</class>
+    <class>proejct4.app.shared.authentication.UserData</class>
+    <class>proejct4.app.shared.authentication.SessionData</class>
+    <class>proejct4.app.shared.authorization.Roles</class>
+    <class>proejct4.app.shared.authorization.AppMenus</class>
+    <class>proejct4.app.shared.authorization.RoleMenuBridge</class>
+    <class>proejct4.app.shared.authorization.UserRoleBridge</class>
+    </persistence-unit>
+
+</persistence>
